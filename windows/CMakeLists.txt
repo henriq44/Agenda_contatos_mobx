@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(mobx_app LANGUAGES CXX)
+project(mobx_aulanew LANGUAGES CXX)
 
-set(BINARY_NAME "mobx_app")
+set(BINARY_NAME "mobx_aulanew")
 
 cmake_policy(SET CMP0063 NEW)
 

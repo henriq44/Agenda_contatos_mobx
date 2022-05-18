@@ -1,6 +1,6 @@
 {
-    "name": "mobx_app",
-    "short_name": "mobx_app",
+    "name": "mobx_aulanew",
+    "short_name": "mobx_aulanew",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

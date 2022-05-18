@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "mobx_app" "\0"
+            VALUE "FileDescription", "mobx_aulanew" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "mobx_app" "\0"
+            VALUE "InternalName", "mobx_aulanew" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "mobx_app.exe" "\0"
-            VALUE "ProductName", "mobx_app" "\0"
+            VALUE "OriginalFilename", "mobx_aulanew.exe" "\0"
+            VALUE "ProductName", "mobx_aulanew" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

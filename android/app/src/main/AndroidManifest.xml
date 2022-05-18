@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mobx_app">
+    package="com.example.mobx_aulanew">
    <application
-        android:label="mobx_app"
+        android:label="mobx_aulanew"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

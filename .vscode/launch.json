@@ -5,22 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "mobx_app",
+            "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
             "flutterMode": "debug"
-        },
-        {
-            "name": "mobx_app (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "mobx_app (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
         }
     ]
 }

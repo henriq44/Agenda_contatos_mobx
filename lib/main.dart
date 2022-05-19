@@ -61,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               title: const Text(''),
             ),
             body: Observer(builder: (context) {
+              int? _value = 1; //aqui ta o problema mas como resolver n sei ainda 
               return Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -92,6 +93,40 @@ class _MyHomePageState extends State<MyHomePage> {
                         counter.setCpf(value);
                       },
                     ),
+                    Row( children: [
+                      
+                      Radio(value: 1, groupValue: _value, onChanged: (value){setState(() {
+                        _value = value as int?;
+                      });},
+                      ),
+                      const SizedBox(width: 10.0,),
+                      const Text("Masculino"),
+                    ],),
+                     Row( children: [
+                      Radio(value: 2, groupValue: _value, onChanged: (value){setState(() {
+                        _value = value as int?;
+                      });},
+                      ),
+                      const SizedBox(width: 10.0,),
+                      const Text("Feminino"),
+                    ],),
+                    Row( children: [
+                      Radio(value: 3, groupValue: _value, onChanged: (value){setState(() {
+                        _value = value as int?;
+                      });},
+                      ),
+                      const SizedBox(width: 10.0,),
+                      const Text("Outro"),
+                    ],),
+                    Row( children: [
+                      Radio(value: 4, groupValue: _value, onChanged: (value){ setState(() {
+                        _value = value as int?;
+                      }); },
+                      ),
+                      const SizedBox(width: 10.0,),
+                      const Text("Prefiro não Dizer"),
+                    ],),
+
                     ElevatedButton(
                       onPressed: counter.isValid
                           ? () async {
@@ -109,3 +144,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+

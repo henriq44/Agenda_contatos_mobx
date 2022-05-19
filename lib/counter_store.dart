@@ -15,6 +15,14 @@ abstract class _CounterStoreBase with Store {
   String cpf = '';
 
   @observable
+  String cep = '';
+
+  @observable
+  String Logradouro = '';
+
+
+
+  @observable
   bool isSaved = false;
 
   @action
@@ -33,6 +41,16 @@ abstract class _CounterStoreBase with Store {
     cpf = value;
     setIsSaved(false);
   }
+   @action
+  void setCep(String value) {
+    cep = value;
+    setIsSaved(false);
+  }
+  @action
+  void setLogradouro(String value) {
+    Logradouro = value;
+    setIsSaved(false);
+  }
 
   @action
   void setIsSaved(bool value) => isSaved = value;
@@ -43,6 +61,8 @@ abstract class _CounterStoreBase with Store {
     await prefs.setString('nome', nome);
     await prefs.setString('idade', idade);
     await prefs.setString('cpf', cpf);
+    await prefs.setString('cep', cep);
+    await prefs.setString('logradouro', Logradouro);
     setIsSaved(true);
   }
 
@@ -52,6 +72,8 @@ abstract class _CounterStoreBase with Store {
     setNome(prefs.getString('nome') ?? '');
     setIdade(prefs.getString('idade') ?? '');
     setCpf(prefs.getString('cpf') ?? '');
+    setCep(prefs.getString('cep') ?? '');
+    setLogradouro(prefs.getString('logradouro') ?? '');
   }
 
   @computed

@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                     ),
                      TextFormField(
-                      initialValue: counter.idade,
+                      initialValue: counter.cpf,
                       decoration: const InputDecoration(
                         labelText: 'cpf',
                       ),
@@ -126,6 +126,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       const SizedBox(width: 10.0,),
                       const Text("Prefiro não Dizer"),
                     ],),
+                    TextFormField(
+                      initialValue: counter.cep,
+                      decoration: const InputDecoration(
+                        labelText: 'cep',
+                      ),
+                      onChanged: (String value) {
+                        counter.setCep(value);
+                      },
+                    ),
+                     TextFormField(
+                      initialValue: counter.Logradouro,
+                      decoration: const InputDecoration(
+                        labelText: 'logradouro',
+                      ),
+                      onChanged: (String value) {
+                        counter.setLogradouro(value);
+                      },
+                    ),
 
                     ElevatedButton(
                       onPressed: counter.isValid

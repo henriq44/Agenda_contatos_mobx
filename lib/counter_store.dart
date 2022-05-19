@@ -12,6 +12,9 @@ abstract class _CounterStoreBase with Store {
   String idade = '';
 
   @observable
+  String cpf = '';
+
+  @observable
   bool isSaved = false;
 
   @action
@@ -25,6 +28,11 @@ abstract class _CounterStoreBase with Store {
     idade = value;
     setIsSaved(false);
   }
+   @action
+  void setCpf(String value) {
+    cpf = value;
+    setIsSaved(false);
+  }
 
   @action
   void setIsSaved(bool value) => isSaved = value;
@@ -34,6 +42,7 @@ abstract class _CounterStoreBase with Store {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('nome', nome);
     await prefs.setString('idade', idade);
+    await prefs.setString('cpf', cpf);
     setIsSaved(true);
   }
 
@@ -42,8 +51,11 @@ abstract class _CounterStoreBase with Store {
     final prefs = await SharedPreferences.getInstance();
     setNome(prefs.getString('nome') ?? '');
     setIdade(prefs.getString('idade') ?? '');
+    setCpf(prefs.getString('cpf') ?? '');
   }
 
   @computed
   bool get isValid => nome.isNotEmpty && idade.isNotEmpty;
 }
+
+

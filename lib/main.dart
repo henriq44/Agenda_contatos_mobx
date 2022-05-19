@@ -83,17 +83,24 @@ class _MyHomePageState extends State<MyHomePage> {
                         counter.setIdade(value);
                       },
                     ),
+                     TextFormField(
+                      initialValue: counter.idade,
+                      decoration: const InputDecoration(
+                        labelText: 'cpf',
+                      ),
+                      onChanged: (String value) {
+                        counter.setCpf(value);
+                      },
+                    ),
                     ElevatedButton(
                       onPressed: counter.isValid
                           ? () async {
                               counter.save();
                             }
                           : null,
-                      child: const Text('botao'),
+                      child: const Text('Salvar'),
                     ),
-                    const Text(
-                      'You have pushed the button this many times:',
-                    ),
+                   
                   ],
                 ),
               );
